@@ -56,10 +56,13 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
           >
             Sign in
           </Link>
-        
+
           <Link
             href="/register"
-            className="px-3 py-2 text-sm  font-semibold text-white rounded-md shadow-sm bg-black  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black "
+            className={cn(
+              "px-3 py-2 text-sm  font-semibold text-white rounded-md shadow-sm bg-black  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black",
+              isMobileMenuOpen ? "block" : "hidden lg:block"
+            )}
           >
             Sign up
           </Link>
