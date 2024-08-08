@@ -133,7 +133,7 @@ const Signin = () => {
                   href="/register"
                   className="text-sm text-[#888] transition duration-150 ease hover:text-black mt-3 group"
                 >
-                  Don't have an account? <span className="font-semibold text-black group-hover:text-lightGreen transition duration-150 ease">Sign up</span>
+                  Don&apos;t have an account? <span className="font-semibold text-black group-hover:text-lightGreen transition duration-150 ease">Sign up</span>
                 </Link>
               </form>
             </div>
