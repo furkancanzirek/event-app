@@ -8,7 +8,7 @@ const MyEvents: React.FC = async () => {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/my-events`,
       {
-        headers: headers,
+        headers: new Headers(headers),
         next: {
           revalidate: 600,
           tags: ["Event"],

@@ -22,7 +22,7 @@ export default async function EventDetailPage({
   let data = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/events/${params.eventId}?userId=${session?.user.id}`,
     {
-      headers,
+      headers: new Headers(headers),
     }
   );
   let { event, isReserved, ttl, reservedCount, isPurchased, paymentId } =
