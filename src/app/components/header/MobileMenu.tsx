@@ -52,7 +52,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
               onLinkClick={() => setMobileMenuOpen(false)}
               mobileMenuOpen={true}
             />
-          
+            <div className="py-6 flex justify-center">
+              <ProfileMenu session={session} isLoading={isLoading} isMobileMenuOpen={mobileMenuOpen} />
+            </div>
           </div>
         </div>
       </div>
