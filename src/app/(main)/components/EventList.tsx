@@ -7,6 +7,8 @@ interface EventListResponse {
 }
 const EventList: React.FC = async () => {
   const headers: HeadersInit = getHeaders();
+  console.log(process.env.NEXT_PUBLIC_API_URL);
+  
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/events`, {
       headers: new Headers(headers),

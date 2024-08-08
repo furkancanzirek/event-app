@@ -49,16 +49,16 @@ const ProfileMenu: React.FC<ProfileMenuProps> = ({
           </button>
         </div>
       ) : (
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex gap-3">
           <Link
             href="/login"
-            className="px-3 py-2 text-sm font-semibold text-white rounded-md shadow-sm bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+            className="px-3 py-2 text-sm font-semibold text-white rounded-md shadow-sm bg-lightGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lightGreen"
           >
             Log in
           </Link>
           <Link
             href="/register"
-            className="px-3 py-2 text-sm font-semibold text-white rounded-md shadow-sm bg-lightGreen focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lightGreen"
+            className="px-3 py-2 text-sm font-semibold text-white rounded-md shadow-sm bg-black  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black "
           >
             Sign up
           </Link>
