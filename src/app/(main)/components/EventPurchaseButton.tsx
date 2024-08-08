@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { cn } from "@/libs/utils";
 import { Event } from "@/types/Event";
+import { useFormStatus } from "react-dom";
 
 interface EventPurchaseButtonProps {
   isReserved?: boolean;
@@ -30,7 +31,7 @@ const EventPurchaseButton: React.FC<EventPurchaseButtonProps> = ({
 }) => {
   const router = useRouter();
   const { data: session } = useSession();
-
+  const { pending } = useFormStatus();
   const handleNavigateToMyEvents = () => router.push("/events/my-events");
   const handlePayment = () => {
     if (paymentId) {
@@ -66,7 +67,14 @@ const EventPurchaseButton: React.FC<EventPurchaseButtonProps> = ({
   }
   if (event?.capacity === event?.seatsOccupied) {
     return (
-      <Button disabled className={cn("bg-gray-500 hover:bg-gray-300 disabled:cursor-not-allowed", className)} size={size}>
+      <Button
+        disabled
+        className={cn(
+          "bg-gray-500 hover:bg-gray-300 disabled:cursor-not-allowed",
+          className
+        )}
+        size={size}
+      >
         Sold Out
       </Button>
     );
@@ -100,7 +108,14 @@ const EventPurchaseButton: React.FC<EventPurchaseButtonProps> = ({
       type="submit"
       size={size}
     >
-      Purchase Ticket
+      {pending ? (
+        <div
+          className="w-6 h-6 rounded-full animate-spin
+                    border-4 border-solid border-white border-t-transparent"
+        ></div>
+      ) : (
+        "Purchase Ticket"
+      )}
     </Button>
   );
 };

@@ -9,6 +9,7 @@ import Input from "@/app/components/ui/Input";
 import { FcGoogle } from "react-icons/fc";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import Link from "next/link";
 
 const schema = z.object({
   email: z.string().email("Please enter a valid email"),
@@ -127,10 +128,20 @@ const Signin = () => {
                 >
                   Sign In
                 </button>
+
+                <Link
+                  href="/register"
+                  className="text-sm text-[#888] transition duration-150 ease hover:text-black mt-3 group"
+                >
+                  Don't have an account? <span className="font-semibold text-black group-hover:text-lightGreen transition duration-150 ease">Sign up</span>
+                </Link>
               </form>
             </div>
+           
           </div>
+         
         </div>
+        
       </div>
     </Suspense>
   );

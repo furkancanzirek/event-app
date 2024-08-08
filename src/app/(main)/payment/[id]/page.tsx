@@ -35,6 +35,9 @@ export default async function PaymentPage({
     redirect("/");
   }
   const ttl = await redis.ttl(`event:${event.id}:reservations`);
+  if (ttl <= 0) {
+    redirect(`/events/${event.id}`);
+  }
 
   return (
     <div className="bg-white">
