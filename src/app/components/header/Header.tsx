@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         <div className="flex-1 hidden lg:block justify-center">
           <Navigation items={navigation} />
         </div>
-        <div className="flex-1 hidden lg:block">
+        <div className="flex-1">
           <ProfileMenu session={session} isLoading={isLoading} />
         </div>
         <div className="flex lg:hidden">

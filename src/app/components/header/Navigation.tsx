@@ -16,7 +16,7 @@ const Navigation: React.FC<NavigationProps> = ({
     <div
       className={cn(
         "flex",
-        mobileMenuOpen ? "flex-col" : "lg:flex",
+        mobileMenuOpen ? "flex-col" : "lg:flex justify-center",
         "gap-x-12"
       )}
     >
