@@ -29,7 +29,7 @@ const Header: React.FC = () => {
         className="flex items-center justify-between p-6 py-3 mx-auto max-w-7xl gap-x-6 lg:px-8"
       >
         <div className="flex flex-1">
-          <div className="relative w-full h-12">
+          <div className="relative w-full h-8 lg:h-12">
             <Link href="/">
               <Image
                 alt="Logo"

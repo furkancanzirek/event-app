@@ -26,7 +26,7 @@ const Navigation: React.FC<NavigationProps> = ({
           href={item.href}
           className={cn(
             " font-semibold leading-6 text-gray-900",
-            mobileMenuOpen ? "block text-lg text-center py-6" : "lg:inline-block text-sm" 
+            mobileMenuOpen ? "block text-xl text-center py-6" : "lg:inline-block text-sm" 
           )}
           onClick={onLinkClick}
         >
