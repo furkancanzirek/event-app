@@ -97,7 +97,7 @@ const EventPurchaseButton: React.FC<EventPurchaseButtonProps> = ({
         onClick={handleLogin}
         size={size}
       >
-        Login to Purchase
+        Sign in to Purchase
       </Button>
     );
   }

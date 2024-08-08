@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Authentication",
-  description: "Login or Register",
+  description: "Sign in or Sign up",
 };
 
 export default function AuthLayout({
